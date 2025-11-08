@@ -4,6 +4,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Language](https://img.shields.io/badge/Language-TypeScript-blue)
+![Made with ❤️ in Google AI Studio](https://img.shields.io/badge/Made%20with-Google%20AI%20Studio-blue)
 
 > A logic-based AI-powered Clinical Decision Support System for **Genito-Urinary (GU) infections**,  
 > designed to assist clinicians in structured diagnosis and reasoning using the **IKP-BTP Algorithm**  
@@ -163,3 +164,6 @@ See the [LICENSE](LICENSE) file for details.
 
 ### 🌟 Star this repo if you find it helpful or inspiring!
 This project bridges **Ayurveda**, **clinical reasoning**, and **AI** — one logic step at a time.
+
+---
+_Last updated: November 2025_
