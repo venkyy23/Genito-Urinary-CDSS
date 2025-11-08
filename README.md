@@ -5,75 +5,161 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Language](https://img.shields.io/badge/Language-TypeScript-blue)
 
-> A logic-based AI-powered clinical decision support system for Genito-Urinary (GU) infections, 
-> built using Google AI Studio and the IKP-BTP diagnostic framework.
+> A logic-based AI-powered Clinical Decision Support System for **Genito-Urinary (GU) infections**,  
+> designed to assist clinicians in structured diagnosis and reasoning using the **IKP-BTP Algorithm**  
+> and a curated **Knowledge Bank (P-GU series)**.
 
-# Genito-Urinary Clinical Decision Support System (CDSS)
+---
 
-## 🩺 Project Overview
-This repository hosts a **Clinical Decision Support System (CDSS)** focused on **Genito-Urinary (GU) infections**, designed to assist clinicians in structured diagnosis and reasoning.  
-The system uses a logic-based conversational flow inspired by clinical examination principles — *Ask, Inspect, Palpate, Lock, Listen, Check, and Measure* — and references the **IKP-BTP Algorithm** alongside a curated **Knowledge Bank (P-GU series)**.
+## 🧭 Overview
+This project demonstrates how a **Google AI Studio chatbot** can be adapted into a clinical reasoning assistant.  
+The system guides the clinician through a structured diagnostic conversation — integrating patient demographics,  
+symptom analysis, and decision locks — to arrive at probable GU infection diagnoses.  
+
+It combines **modern AI logic** with **clinical examination principles**:  
+**Ask → Inspect → Palpate → Lock → Listen → Check → Measure.**
 
 ---
 
 ## 🎯 Objectives
-- To provide a **logic-driven clinical chatbot** that guides step-by-step GU diagnosis.
-- To **standardize** the reasoning pathway for evaluating male and female GU symptoms.
-- To demonstrate how **AI-driven dialogue systems** can support **Ayurvedic and modern medical diagnosis**.
+- To simulate **clinical reasoning** in Genito-Urinary disorders through AI-driven dialogue.  
+- To build a **logic-based diagnostic flow** inspired by the **IKP-BTP Algorithm**.  
+- To assist clinicians in stepwise **data collection and differential diagnosis**.  
+- To demonstrate integration of **AI & healthcare domain knowledge** for education and decision support.  
 
 ---
 
 ## 🧩 Key Features
-- **Dynamic patient dialogue** – asks and adapts based on responses.  
-- **Demographic stratification** – incorporates Name, Age, and Gender to tailor logic for men and women.  
-- **Algorithm-based reasoning** – follows the **IKP-BTP** diagnostic framework.  
-- **Structured workflow** – integrates *Ask → Inspect → Palpate → Lock → Listen → Check → Measure*.  
-- **Explainable output** – provides diagnostic summary, reasoning, and next-step suggestions.  
+- 🧠 **Algorithmic reasoning** — integrates logic from the IKP-BTP diagnostic framework.  
+- 👩‍⚕️ **Demographic stratification** — adapts diagnostic flow for male and female patients.  
+- 🗂️ **Knowledge bank integration** — uses curated P-GU files for evidence-based responses.  
+- 💬 **Interactive conversation flow** — guides user through structured clinical steps.  
+- 📊 **Explainable output** — provides summarized findings and next-step suggestions.  
+
+---
+
+## ⚙️ Workflow Logic
+
+| Step | Description |
+|------|--------------|
+| **Ask** | Gather history — symptoms, onset, pain, frequency, discharge, fever, etc. |
+| **Inspect** | Observe external signs — swelling, redness, lesions. |
+| **Palpate** | Identify tenderness, lumps, or local warmth. |
+| **Lock** | Apply key decision locks to narrow differential diagnoses. |
+| **Listen** | Include patient’s additional subjective concerns. |
+| **Check** | Add investigation data — urine analysis, culture, USG. |
+| **Measure** | Quantify parameters — urine output, temperature, WBC count. |
 
 ---
 
 ## 🧠 Knowledge Sources
-All medical insights are derived from:
-- Knowledge bank files labeled **P-GU-00x**, curated from validated references.
-- Diagnostic flow modeled from **IKP-BTP Algorithm** (PDF).
-- Standard genito-urinary clinical protocols.
+- **P-GU-00x files** – Structured clinical insights for GU infections.  
+- **IKP-BTP Algorithm** – Stepwise diagnostic reasoning model.  
+- Standard clinical protocols and differential patterns for GU systems.  
 
 ---
 
-## ⚙️ Workflow Overview
-
-| Stage | Description |
-|--------|--------------|
-| **Ask** | Collect patient history, symptoms, and onset. |
-| **Inspect** | Observe external findings (redness, swelling, lesions). |
-| **Palpate** | Document examination findings (tenderness, lumps). |
-| **Lock** | Identify key diagnostic “locks” (critical decision points). |
-| **Listen** | Incorporate additional patient-reported clues. |
-| **Check** | Include test findings (urinalysis, culture, imaging). |
-| **Measure** | Quantify vital parameters (temperature, urine output, etc.). |
+## 🚀 Demo / How to Run
+1. Open the project in [Google AI Studio](https://aistudio.google.com/).  
+2. Upload the exported configuration file located at:
+3. Run the chatbot interface.  
+4. The system will begin by asking:
+- Patient Name  
+- Age  
+- Gender  
+- Duration of symptoms  
+5. Then it continues through the structured examination flow (Ask → Inspect → Palpate → Lock → Listen → Check → Measure).  
+6. At the end, it summarizes the probable diagnosis and recommends next steps.
 
 ---
 
-## 🧮 Example Conversation Flow
+## 💬 Example Interaction
 
 **AI:** Please enter patient details — Name, Age, and Gender.  
 **User:** Name: Ramesh, Age: 42, Gender: Male.  
-**AI:** Thank you. What is the main urinary complaint (burning, frequency, discharge, pain, etc.)?  
+**AI:** Thank you. What is the main urinary complaint — burning, frequency, discharge, or pain?  
 **User:** Burning and increased frequency for 3 days.  
-**AI:** Understood. Any associated fever, flank pain, or discharge?  
-**User:** Mild fever, no discharge.  
-**AI:** Based on current information, differential diagnoses include *Acute Cystitis* and *Urethritis*. Please confirm if any lower abdominal pain is present.  
+**AI:** Understood. Are there any associated symptoms like fever or flank pain?  
+**User:** Mild fever, no flank pain.  
+**AI:** Based on current findings, possible diagnoses include **Acute Cystitis** and **Urethritis**.  
+Please confirm if there is any suprapubic tenderness.  
 
 ---
 
-## 🧰 Tech Stack
-- **Google AI Studio** – for chatbot prompt design and flow logic.
-- **GitHub** – for version control and project sharing.
-- *(Optional)* Future expansion: Python / Flask backend for integration with EMR or web interface.
+## 🗂️ Repository Structure
+
+Genito-Urinary-CDSS/
+│
+├── prompts/
+│ ├── main_prompt.txt # Core prompt and clinical logic
+│ ├── logic_flow.txt # Ask → Inspect → Palpate → Lock → Listen → Check → Measure flow
+│
+├── knowledgebank/
+│ ├── P-GU-001.txt
+│ ├── P-GU-002.txt
+│ └── ... # Knowledge base for GU conditions
+│
+├── docs/
+│ ├── overview.pdf # Algorithm explanation or visual reference
+│ ├── demo.png # Screenshot of AI Studio chatbot
+│ └── references.txt # Literature or sources
+│
+├── app_config/
+│ └── google_ai_studio_export.json # AI Studio export file
+│
+├── src/
+│ ├── components/ # TypeScript components for UI logic
+│ ├── constants/ # Config or variable definitions
+│
+├── README.md # Project documentation
+└── LICENSE # Open-source license (MIT)
+
 
 ---
 
-## 🚀 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<yourusername>/Genito-Urinary-CDSS.git
+## 🧮 Tech Stack
+- **Google AI Studio (Gemini)** — conversational model & prompt logic  
+- **TypeScript + HTML** — frontend generated by AI Studio  
+- **JSON Configuration** — defines model instructions and flows  
+- *(Optional)* Python / Flask backend for future clinical integration  
+
+---
+
+## 🧪 Demo Preview
+![Screenshot](docs/demo.png)
+
+*(Sample interface from Google AI Studio — stepwise diagnostic reasoning flow.)*
+
+---
+
+## 🔭 Future Enhancements
+- Integration with **Electronic Health Records (EHR)** or **FHIR** APIs  
+- Add **Ayurvedic diagnostic mapping** (Prakriti and Dosha-based insights)  
+- Train on additional datasets for multi-system decision support  
+- Export logic as **FHIR-compatible decision rules** for hospital integration  
+
+---
+
+## 👨‍⚕️ Author
+**Dr. Venkatesha Nayak**  
+PG Diploma in AI & Data Science in Healthcare  
+Junior Ayurvedic Physician | Data Science Enthusiast  
+
+📍 Bengaluru, India  
+📧 venkateshnayakb23@gmail.com 
+
+---
+
+## 📄 License
+MIT License — Free to use and modify with attribution.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🏷️ Topics
+`ai-healthcare` • `cdss` • `genito-urinary` • `medical-ai` • `google-ai-studio` • `diagnostics` • `ayurveda`
+
+---
+
+### 🌟 Star this repo if you find it helpful or inspiring!
+This project bridges **Ayurveda**, **clinical reasoning**, and **AI** — one logic step at a time.
