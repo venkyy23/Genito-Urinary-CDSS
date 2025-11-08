@@ -1,0 +1,5 @@
+{
+  "name": "Genito-Urinary Clinical Decision Support System",
+  "description": "An interactive clinical decision support system to aid healthcare professionals in diagnosing Genito-Urinary conditions based on a structured algorithmic approach. The application guides users through a series of questions and examinations to arrive at a potential diagnosis.",
+  "requestFramePermissions": []
+}
