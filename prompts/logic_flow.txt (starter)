@@ -1,0 +1,12 @@
+Flow:
+1. Collect demographics: Name, Age, Gender
+2. Ask: chief complaint, onset, duration, urinary symptoms (dysuria, frequency, urgency, hematuria, discharge)
+3. Inspect: external signs (redness, swelling, lesions)
+4. Palpate: tenderness (suprapubic, flank), masses
+5. Lock: 
+   - IF dysuria + frequency + no flank pain AND urine dipstick positive nitrite OR leukocyte esterase THEN suggest Acute Cystitis
+   - IF fever + flank pain + costovertebral tenderness THEN suggest Pyelonephritis
+6. Listen: patient-reported systemic symptoms
+7. Check: request urinalysis, urine culture, ultrasound if indicated
+8. Measure: temperature, WBC count, urine output
+9. Output: ordered differential list, reasoning trace, next steps
